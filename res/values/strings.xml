@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">色盲acritochromacy测试</string>
+    <string name="tv01">你知道吗？？？</string>
+    <string name="tv02">原来色盲有很多种，每一种色盲人眼中的世界都是“与众不同”的，想知道你眼中的世界究竟是五颜六色的，还是缺红少绿的，亦或是黑白的吗？那就进去瞧一瞧吧。。。</string>
+    <string name="action_settings">Settings</string>
+    <string name="gobtn">Go</string>
+    <string name="monochromasiaTV">全色盲</string>
+    <string name="redblindnessTV">红色盲</string>
+    <string name="greenblindnessTV">绿色盲</string>
+    <string name="BYblindnessTV">蓝黄色盲</string>
+    <string name="RGblindnessTV">红绿色盲</string>
+    <string name="coloragainstTV">全色反</string>
+    <string name="colorweaknessTV">全色弱</string>
+    <string name="PcolorweaknessTV">部分色弱</string>
+</resources>

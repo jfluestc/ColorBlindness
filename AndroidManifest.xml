@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example2.colorblind"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TextActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".MonochromasiaActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".RedblindnessActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".GreenblindnessActivity"
+            android:label="@string/app_name">
+        </activity>
+                <activity
+            android:name=".BYblindnessActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".RGblindnessActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ColoragainstActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ColorweaknessActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".PcolorweaknessActivity"
+            android:label="@string/app_name">
+        </activity>
+    </application>
+
+</manifest>
