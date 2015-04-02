@@ -14,4 +14,11 @@
     <string name="coloragainstTV">全色反</string>
     <string name="colorweaknessTV">全色弱</string>
     <string name="PcolorweaknessTV">部分色弱</string>
+    <string name="answer">请输入你看见的数字或图形名称</string>
+    <string name="back">back</string>
+    <string name="next">next</string>
+    <string name="text">请在下方输入你在图片上所看到的内容（数字或图形名称）</string>
+    <string name="choice01">看不清图片的内容</string>
+    <string name="choice02">已看清图片的内容</string>
+    <string name="choice03"></string>
 </resources>
