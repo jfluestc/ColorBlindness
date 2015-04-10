@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 声明xml的命名空间，xmlns的意思是xml namespace，冒号后边是给这个引用起的别名
+schemas是xml文档的两种约束文件中的一种，规定xml中有哪些元素(标签)、元素有哪些属性级个元素的关系，
+从面型对象角度理解schemas文件可以认为它是被约束的xml文档的"类"或称为"模板"
+其主要作用是在运行的时候那些控件的属性都是通过他来识别的，如果上面写错，则不会有任何问题，只是在运行的时候就会
+报错，无法识别你定义的水性，例如你已经定了高度和宽度，但是系统识别不出来，就会提示没有指定宽度和高度-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="0%p"
+        android:toXDelta="100%p"
+        android:duration="300">
+        </translate>
+</set>

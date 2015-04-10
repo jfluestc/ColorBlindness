@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- fromXDelta:设置动画的起始位置，toXDelta:设置动画的终点位置,duration:设置动画的时间ms -->
+    <translate
+        android:fromXDelta="0%p"
+        android:toXDelta="-100%p"
+        android:duration="100">
+        </translate>
+</set>

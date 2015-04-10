@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
+    android:gravity="center"
     tools:context="com.example2.colorblind.MainActivity" >
 
     <TextView
@@ -12,9 +13,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tv01" 
         android:textSize="25sp"
-        android:textStyle="italic"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"/>"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
     <TextView
         android:id="@+id/tv02"
         android:layout_width="fill_parent"
@@ -28,7 +28,7 @@
         android:id="@+id/gobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/go"
+        android:background="@drawable/btn_select"
         android:text="@string/gobtn"
         android:textColor="#000000"
         android:textStyle="italic|bold"

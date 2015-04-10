@@ -3,17 +3,26 @@ package com.example2.colorblind;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
 import android.widget.TabHost;
 
 @SuppressWarnings("deprecation")
-public class BYblindnessActivity extends TabActivity {
+public class BYblindnessActivity extends TabActivity{
 	
+	GestureDetector gesture;
+	TabHost tab;
+	private static final float XLENGTH=50;
+	private static final float XVELOCITY=5;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		MyApplication.getInstance().addActivity(this);
+		
 /*		setContentView(R.layout.activity_byblindness);*/
-		TabHost tab = getTabHost();
+		tab = getTabHost();
 		Intent intent1,intent2;
 		Bundle bundle = new Bundle();
 		bundle.putInt("key", 4);
@@ -35,5 +44,70 @@ public class BYblindnessActivity extends TabActivity {
 		tab.addTab(spec2);
 		
 		tab.setCurrentTab(0);
+		gesture = new GestureDetector(ges);
+	}
+	private OnGestureListener ges = new OnGestureListener(){
+
+		@Override
+		public boolean onDown(MotionEvent e) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void onShowPress(MotionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public boolean onSingleTapUp(MotionEvent e) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean onScroll(MotionEvent e1, MotionEvent e2,
+				float distanceX, float distanceY) {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void onLongPress(MotionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+				float velocityY) {
+			// TODO Auto-generated method stub
+			//向右滑动
+			if((e2.getX()-e1.getX())>XLENGTH && Math.abs(velocityX) > XVELOCITY){
+				lastPage();
+			}
+			//向左滑动
+			if((e1.getX()-e2.getX())>XLENGTH && Math.abs(velocityX) > XVELOCITY){
+				nextPage();
+			    return true;
+			}
+			return true;
+		}
+	};
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		return gesture.onTouchEvent(event);
+	}
+	private void nextPage(){
+		int i = tab.getCurrentTab();
+		if(i == 0)
+			tab.setCurrentTab(1);
+	}
+	private void lastPage(){
+		int i = tab.getCurrentTab();
+		if(i ==1)
+			tab.setCurrentTab(0);
 	}
 }
